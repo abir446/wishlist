@@ -9,9 +9,12 @@ const Hero = () => {
   useEffect(() => {
     const getWishes = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/wishes/", {
-          cache: "no-store",
-        });
+        const res = await fetch(
+          "https://wishlist-icfb.vercel.app/api/wishes/",
+          {
+            cache: "no-store",
+          }
+        );
 
         if (!res.ok) {
           throw new Error("Failed to get topics");

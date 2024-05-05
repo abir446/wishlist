@@ -8,9 +8,12 @@ const Done = ({ id }) => {
   const handleDone = async () => {
     const confirmed = confirm("Are you sure you want to remove?");
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/wishes/?id=${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://wishlist-icfb.vercel.app/api/wishes/?id=${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (res.ok) {
         window.location.href = "/";
       }

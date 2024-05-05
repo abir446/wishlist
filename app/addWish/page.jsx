@@ -19,7 +19,7 @@ const Addwish = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/wishes", {
+      const res = await fetch("https://wishlist-icfb.vercel.app/api/wishes", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
