@@ -14,3 +14,12 @@ export async function GET(req) {
   const res = await Wish.find();
   return NextResponse.json(res, { status: 200 });
 }
+
+export async function DELETE(req) {
+  const id = req.nextUrl.searchParams.get("id");
+  console.log(id);
+  await connectDB();
+  await Wish.findByIdAndDelete(id);
+  return NextResponse.json({ status: 204 }, { message: "Deleted" });
+}
+
