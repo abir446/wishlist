@@ -5,15 +5,6 @@ import Wish from "@/components/Wish";
 import Link from "next/link";
 
 const Hero = () => {
-  useEffect(async () => {
-    const res = await fetch("routerhttp://localhost:3000/api/wishes", {
-      method: "GET",
-    });
-    if (res.ok) {
-      console.log(res.data);
-    }
-  }, []);
-
   return (
     <div className="max-w-6xl h-screen bg-blue-50 hover:bg-blue-100 transition-all duration-1000  rounded-xl flex flex-col items-center justify-start mx-auto pt-10 p-4">
       <Link className="w-[80%]" href={"/addWish"}>
