@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { CiCirclePlus } from "react-icons/ci";
-import Wish from "@/app/[components]/Wish";
+import Wish from "./Wish";
 import Link from "next/link";
 
 const Hero = () => {

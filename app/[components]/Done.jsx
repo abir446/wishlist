@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { useRouter } from "next/navigation";
@@ -11,8 +12,7 @@ const Done = ({ id }) => {
         method: "DELETE",
       });
       if (res.ok) {
-        console.log("Deleted successfully");
-        router.push("/");
+        window.location.href = "/";
       }
     }
   };
